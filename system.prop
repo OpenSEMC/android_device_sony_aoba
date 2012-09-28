@@ -2,6 +2,9 @@
 ro.telephony.ril_class=SonyQualcommRIL
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
+mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
+ro.telephony.default_network=9
+telephony.lteOnGsmDevice=1
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
