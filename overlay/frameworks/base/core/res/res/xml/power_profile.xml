@@ -1,21 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">80</item>
-    <item name="bluetooth.active">9.9</item>
-    <item name="bluetooth.on">9.7</item>
-    <item name="screen.full">232.8</item>
-    <item name="wifi.on">26.7</item>
-    <item name="wifi.active">99.5</item>
-    <item name="wifi.scan">66.9</item>
+    <item name="screen.on">38.94</item>
+    <item name="bluetooth.active">0.1</item>
+    <item name="bluetooth.on">5.23</item>
+    <item name="bluetooth.at">8.73</item>
+    <item name="screen.full">221</item>
+    <item name="wifi.on">6.59</item>
+    <item name="wifi.active">22.10</item>
+    <item name="wifi.scan">0.1</item>
     <item name="dsp.audio">0.1</item>
     <item name="dsp.video">0.1</item>
-    <item name="radio.active">550.0</item>
-    <item name="radio.scanning">7.9</item>
-    <item name="gps.on">100.6</item>
+    <item name="radio.active">273</item>
+    <item name="radio.scanning">6.59</item>
+    <item name="gps.on">29</item>
     <array name="radio.on">
-        <value>2.0</value>
-        <value>5.1</value>
+        <value>6.15</value>
+        <value>6.15</value>
+        <value>6.14</value>
+        <value>6.18</value>
+        <value>6.13</value>
     </array>
     <array name="cpu.speeds">
         <value>192000</value>
@@ -42,31 +46,32 @@
         <value>1458000</value>
         <value>1512000</value>
     </array>
-    <item name="cpu.idle">3.37</item>
+    <item name="cpu.idle">2.2</item>
     <array name="cpu.active">
-        <value>407.8</value>
-        <value>420.0</value>
-        <value>426.9</value>
-        <value>432.5</value>
-        <value>438.4</value>
-        <value>442.5</value>
-        <value>448.0</value>
-        <value>457.3</value>
-        <value>466.4</value>
-        <value>473.9</value>
-        <value>484.5</value>
-        <value>494.7</value>
-        <value>505.8</value>
-        <value>515.6</value>
-        <value>524.9</value>
-        <value>534.3</value>
-        <value>544.1</value>
-        <value>552.4</value>
-        <value>566.8</value>
-        <value>581.1</value>
-        <value>595.8</value>
-        <value>603.0</value>
-        <value>608.8</value>
+        <value>44.82</value>
+        <value>44.97</value>
+        <value>46.60</value>
+        <value>47.08</value>
+        <value>47.46</value>
+        <value>47.87</value>
+        <value>57.37</value>
+        <value>57.62</value>
+        <value>58.19</value>
+        <value>58.80</value>
+        <value>59.04</value>
+        <value>58.73</value>
+        <value>59.23</value>
+        <value>59.62</value>
+        <value>60.37</value>
+        <value>60.73</value>
+        <value>77.35</value>
+        <value>78.65</value>
+        <value>79.59</value>
+        <value>79.96</value>
+        <value>81.54</value>
+        <value>82.59</value>
+        <value>83.56</value>
     </array>
-    <item name="battery.capacity">1900</item>
+    <item name="cpu.awake">44.97</item>
+    <item name="battery.capacity">1750</item>
 </device>
