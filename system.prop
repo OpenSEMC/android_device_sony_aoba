@@ -2,9 +2,6 @@
 ro.telephony.ril_class=SonyQualcommRIL
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
-mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
-ro.telephony.default_network=9
-telephony.lteOnGsmDevice=1
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -16,35 +13,9 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
+keyguard.no_require_sim=1
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
-
-# Notify the system that the RIL only signals once
-ro.telephony.call_ring.multiple=false
-
-#
-# system props for the cne module
-#
-persist.cne.UseCne=false
-persist.cne.bat.range.low.med=30
-persist.cne.bat.range.med.high=60
-persist.cne.loc.policy.op=/system/etc/OperatorPolicy.xml
-persist.cne.loc.policy.user=/system/etc/UserPolicy.xml
-persist.cne.bwbased.rat.sel=false
-persist.cne.snsr.based.rat.mgt=false
-persist.cne.bat.based.rat.mgt=false
-persist.cne.be.ge.sqi.min=0
-persist.cne.be.ge.sqi.max=100
-persist.cne.be.umts.sqi.min=0
-persist.cne.be.umts.sqi.max=100
-persist.cne.be.hspa.sqi.min=0
-persist.cne.be.hspa.sqi.max=100
-persist.cne.be.1x.sqi.min=0
-persist.cne.be.1x.sqi.max=100
-persist.cne.be.do.sqi.min=0
-persist.cne.be.do.sqi.max=100
-persist.cne.be.wlan.sqi.min=0
-persist.cne.be.wlan.sqi.max=100
 
 # Graphics
 ro.sf.lcd_density=320
@@ -52,17 +23,13 @@ com.qc.hardware=true
 debug.sf.hw=1
 debug.enabletr=true
 debug.composition.type=dyn
-ro.sf.compbypass.enable=1
+debug.mdpcomp.maxlayer=3
+debug.mdpcomp.logs=0
+debug.hwc.dynThreshold=2.0
 ro.hwui.text_cache_width=2048
-ro.hdmi.enable=false
-com.qc.hdmi_out=false
 
 # QCOM CpuGovernorService
 dev.pm.dyn_samplingrate=1
-
-# QCOM LPA (Low Power Audio)
-lpa.use-stagefright=true
-lpa.decode=true
 
 # system prop for opengles version
 ro.opengles.version=131072
@@ -72,7 +39,9 @@ wifi.supplicant_scan_interval=30
 
 # system props for the data modules
 ro.use_data_netmgrd=true
-persist.data_netmgrd_nint=11
+persist.data_netmgrd_nint=3
 
 # System prop for sending transmit power request to RIL during WiFi hotspot on/off
 ro.ril.transmitpower=true
+
+ro.hardware.respect_als=true

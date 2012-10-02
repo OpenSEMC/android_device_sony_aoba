@@ -22,13 +22,15 @@
 #
 #
  
-# Camera & Torch
+# Torch
 PRODUCT_PACKAGES := \
-    Camera \
     Torch
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Charging animation
+$(call inherit-product, device/sony/fuji-common/prebuilt/resources-xdpi.mk)
 
 # Inherit from aoba device
 $(call inherit-product, device/sony/aoba/aoba.mk)

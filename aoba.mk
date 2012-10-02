@@ -14,21 +14,17 @@
 # limitations under the License.
 #
 
+DEVICE_PACKAGE_OVERLAYS += device/sony/aoba/overlay
+
 # Inherit the fuji-common definitions
 $(call inherit-product, device/sony/fuji-common/fuji.mk)
 
-# misc
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.setupwizard.enable_bypass=1 \
-    dalvik.vm.lockprof.threshold=500 \
-    ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y
-
-DEVICE_PACKAGE_OVERLAYS += device/sony/aoba/overlay
+# The gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -39,6 +35,10 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Configuration scripts
 PRODUCT_COPY_FILES += \
+   device/sony/fuji-common/prebuilt/logo_X.rle:root/logo.rle \
+
+# Configuration scripts
+PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/prebuilt/pre_hw_config.sh:system/etc/pre_hw_config.sh \
    $(LOCAL_PATH)/prebuilt/hw_config.sh:system/etc/hw_config.sh
 
@@ -46,13 +46,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/init.semc.usb.rc:root/init.semc.usb.rc
 
-# FS
 PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/config/init.semc.fs.rc:root/init.semc.fs.rc
-
-# Service
-PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/config/init.semc.service.rc::root/init.semc.service.rc
+   $(LOCAL_PATH)/config/fstab.semc:root/fstab.semc
 
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/vold.fstab:system/etc/vold.fstab \
@@ -61,7 +56,6 @@ PRODUCT_COPY_FILES += \
 # Recovery bootstrap (device-specific part)
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/recovery/bootrec-device:root/sbin/bootrec-device \
-   $(LOCAL_PATH)/recovery/bootrec-device-fs:root/sbin/bootrec-device-fs \
    $(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
 
 # Key layouts and touchscreen
@@ -74,7 +68,7 @@ PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/pmic8058_pwrkey.kl:system/usr/keylayout/pmic8058_pwrkey.kl \
    $(LOCAL_PATH)/config/simple_remote.kl:system/usr/keylayout/simple_remote.kl
 
-$(call inherit-product, frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/sony/aoba/aoba-vendor.mk)
 

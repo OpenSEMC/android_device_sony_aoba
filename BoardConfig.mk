@@ -6,10 +6,10 @@ USE_CAMERA_STUB := true
 #inherit from the common fuji definitions
 -include device/sony/fuji-common/BoardConfigCommon.mk
 
-TARGET_KERNEL_CONFIG := cyanogen_aoba_defconfig
+TARGET_KERNEL_CONFIG := cyanogen_aoba_row_defconfig
 
 # Partition information
-BOARD_VOLD_MAX_PARTITIONS := 18
+BOARD_VOLD_MAX_PARTITIONS := 16
 
 # the following two sizes are generous guesses
 # since these partitions are not visible
@@ -23,6 +23,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
-BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p18
+BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p15
 
-TARGET_OTA_ASSERT_DEVICE := LT28h,aoba
+TARGET_OTA_ASSERT_DEVICE := LT26w,aoba
