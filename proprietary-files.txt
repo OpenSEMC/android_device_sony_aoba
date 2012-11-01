@@ -6,7 +6,6 @@ bin/cal_data_manager
 bin/chargemon
 bin/clearpad_fwloader
 bin/fast-dormancy
-bin/illumination_service
 bin/imei_transporter
 bin/ks
 bin/mpdecision
@@ -29,8 +28,6 @@ bin/tad
 bin/thermald
 bin/updatemiscta
 bin/wait4tad
-etc/OperatorPolicy.xml
-etc/UserPolicy.xml
 etc/clearpad_fwloader.sh
 etc/fast-dormancy/fd_custm_conf.txt
 etc/fast-dormancy/fd_ext_conf.txt
@@ -84,7 +81,6 @@ etc/firmware/vidc_1080p.fw
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 etc/flashled_calc_parameters.cfg
-etc/init.qcom.bt.sh
 etc/permissions/com.dsi.ant.antradio_library.xml
 etc/sensors.conf
 etc/wifi/calibration
@@ -100,6 +96,7 @@ lib/hw/gps.msm8660.so
 lib/hw/nfc.msm8660.so
 lib/hw/sensors.default.so
 lib/libC2D2.so
+lib/libc2d2_z180.so
 lib/libMPU3050.so
 lib/libOpenVG.so
 lib/lib_asb_tee.so
@@ -131,7 +128,6 @@ lib/libgemini.so
 lib/libgsl.so
 lib/libidd.so
 lib/libidl.so
-lib/liblights-core.so
 lib/libmiscta.so
 lib/libmllite.so
 lib/libmlplatform.so
@@ -162,7 +158,13 @@ lib/libta.so
 lib/libta_rmt_clnt.so
 lib/libthermal_mitigation.so
 lib/libthermal_mitigation_fusion.so
-lib/libv8.so
+lib/libdnshostprio.so
+lib/pp_proc_plugin.so
+lib/qnet-plugin.so
+lib/tcp-connections.so
+lib/libmmjps.so
+lib/libmmmpod.so
+lib/libsys-utils.so
 vendor/camera/APT01BM0.dat
 vendor/camera/KMO13BS0.dat
 vendor/camera/KMO13BS0_BU6456.dat
@@ -175,3 +177,4 @@ vendor/camera/SOI13BS1_IMX091.dat
 vendor/camera/STW01BM0.dat
 vendor/camera/flash.dat
 vendor/camera/product.dat
+vendor/firmware/libpn544_fw.so
