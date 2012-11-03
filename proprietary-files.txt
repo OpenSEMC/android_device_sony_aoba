@@ -96,7 +96,6 @@ lib/hw/gps.msm8660.so
 lib/hw/nfc.msm8660.so
 lib/hw/sensors.default.so
 lib/libC2D2.so
-lib/libc2d2_z180.so
 lib/libMPU3050.so
 lib/libOpenVG.so
 lib/lib_asb_tee.so
@@ -106,6 +105,7 @@ lib/libals.so
 lib/libanthal.so
 lib/libaudcal.so
 lib/libaudioalsa.so
+lib/libc2d2_z180.so
 lib/libcald_client.so
 lib/libcald_hal.so
 lib/libcald_imageutil.so
@@ -134,7 +134,9 @@ lib/libmlplatform.so
 lib/libmm-color-convertor.so
 lib/libmmipl.so
 lib/libmmjpeg.so
+lib/libmmjps.so
 lib/libmmmpo.so
+lib/libmmmpod.so
 lib/libmmstereo.so
 lib/libmpl.so
 lib/libnetmgr.so
@@ -154,17 +156,11 @@ lib/libril-qc-qmi-1.so
 lib/libril.so
 lib/libs1sl.so
 lib/libsc-a2xx.so
+lib/libsys-utils.so
 lib/libta.so
 lib/libta_rmt_clnt.so
 lib/libthermal_mitigation.so
 lib/libthermal_mitigation_fusion.so
-lib/libdnshostprio.so
-lib/pp_proc_plugin.so
-lib/qnet-plugin.so
-lib/tcp-connections.so
-lib/libmmjps.so
-lib/libmmmpod.so
-lib/libsys-utils.so
 vendor/camera/APT01BM0.dat
 vendor/camera/KMO13BS0.dat
 vendor/camera/KMO13BS0_BU6456.dat
