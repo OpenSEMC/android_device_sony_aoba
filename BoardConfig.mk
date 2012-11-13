@@ -9,7 +9,7 @@ USE_CAMERA_STUB := true
 TARGET_KERNEL_CONFIG := cyanogen_fuji_csfb_aoba_defconfig
 
 # Partition information
-BOARD_VOLD_MAX_PARTITIONS := 16
+BOARD_VOLD_MAX_PARTITIONS := 18
 
 # the following two sizes are generous guesses
 # since these partitions are not visible
@@ -23,6 +23,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
-BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p15
+BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p18
 
 TARGET_OTA_ASSERT_DEVICE := LT26w,aoba
