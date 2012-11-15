@@ -9,7 +9,7 @@ service kickstart /system/bin/qcks l
 service qmiproxy /system/bin/qmiproxy
     class main
     user radio
-    group radio
+    group radio qcom_diag
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p10 /dev/block/mmcblk0p11 /dev/block/mmcblk0p17
     class emmc
