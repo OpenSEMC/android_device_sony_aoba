@@ -2,6 +2,8 @@
 mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
 ro.telephony.default_network=9
 telephony.lteOnGsmDevice=1
+ro.enable.fast_dormancy=false
+persist.data_netmgrd_nint=11
 
 # Graphics
 ro.sf.lcd_density=320
