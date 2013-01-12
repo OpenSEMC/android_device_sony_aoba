@@ -156,6 +156,7 @@ lib/libril-qc-qmi-1.so
 lib/libril.so
 lib/libs1sl.so
 lib/libsc-a2xx.so
+lib/libsurfaceflinger_client.so
 lib/libsys-utils.so
 lib/libta.so
 lib/libta_rmt_clnt.so
