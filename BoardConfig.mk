@@ -8,6 +8,9 @@ USE_CAMERA_STUB := true
 
 TARGET_KERNEL_CONFIG := opensemc_fuji_aoba_defconfig
 
+# Custom bluedroid includes
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/nozomi/bluetooth
+
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 18
 
