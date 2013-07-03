@@ -2,6 +2,7 @@ app/AntHalService.apk
 app/antradioservice.apk
 app/antstatenotifer.apk
 bin/bq275xx_fwloader
+bin/bridgemgrd
 bin/btld
 bin/cal_data_manager
 bin/chargemon
@@ -148,6 +149,7 @@ lib/libqdp.so
 lib/libqmi.so
 lib/libqmi_client_qmux.so
 lib/libqmiservices.so
+lib/libQSEEComAPI.so
 lib/libqueue.so
 lib/libril-qc-qmi-1.so
 lib/libril.so
