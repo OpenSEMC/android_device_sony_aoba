@@ -15,7 +15,7 @@ dev=/sys/bus/i2c/devices/3-0054/
 val_cycle=2
 val_nburst=7
 val_freq=3
-val_threshold=15
+val_threshold=10
 val_filter=0
 
 nv_param_loader 60240 prox_cal
@@ -37,7 +37,10 @@ echo $val_filter > $dev/filter  # RFilter. Valid range is 0 - 3.
 
 # LMU AS3676 Configuration
 dev=/sys/class/leds
-echo 3000 > $dev/button-backlight/max_current
+echo 1,80,255,5,16,9,16 > $dev/lcd-backlight/als/curve  # ALS curve for group1
+echo 1,0,0,0 > $dev/lcd-backlight/als/params  #[gain],[filter_up],[filter_down],[offset]
+echo 1 > $dev/lcd-backlight/als/enable  #Sensor on/off. 1 = on, reg 90h
+echo 6000 > $dev/button-backlight/max_current
 
 # TI BQ275xx firmware loader
 bq275xx_fwloader
