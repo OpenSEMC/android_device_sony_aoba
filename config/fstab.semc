@@ -9,9 +9,9 @@
 /dev/block/mmcblk0p17  /data    ext4  noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc  wait,check,encryptable=footer
 
 # sdcard mounting
-/devices/platform/msm_sdcc.1/mmc_host/mmc0  /storage/sdcard0  vfat  noatime,nosuid,noexec,nodiratime,rw  voldmanaged=sdcard0:18,nonremovable
-/devices/platform/msm_sdcc.3/mmc_host  /storage/sdcard1  vfat  defaults  voldmanaged=sdcard1:auto
-/devices/platform/msm_hsusb_host.0  /storage/usbdisk  auto  defaults  voldmanaged=usbdisk:auto
+/devices/platform/msm_sdcc.1/mmc_host/mmc0  auto  vfat  noatime,nosuid,noexec,nodiratime,rw  voldmanaged=sdcard0:18,nonremovable,noemulatedsd
+/devices/platform/msm_sdcc.3/mmc_host  auto  vfat  defaults  voldmanaged=sdcard1:auto
+/devices/platform/msm_hsusb_host.0  auto  auto  defaults  voldmanaged=usbdisk:auto
 
 # CWM
 dev/block/mmcblk0p18  /sdcard  auto  defaults  recoveryonly
