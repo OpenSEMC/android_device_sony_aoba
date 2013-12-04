@@ -45,9 +45,6 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/cfx/config/common_full_phone.mk)
 endif
 
-# Resources
-$(call inherit-product, device/sony/common/resources-xhdpi.mk)
-
 # Inherit from aoba device
 $(call inherit-product, device/sony/aoba/aoba.mk)
 
