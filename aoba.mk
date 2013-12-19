@@ -15,6 +15,8 @@
 #
 
 DEVICE_PACKAGE_OVERLAYS += device/sony/aoba/overlay
+# proprietary side of the device
+$(call inherit-product, vendor/sony/aoba/aoba-vendor.mk)
 
 # Inherit the fuji-common definitions
 $(call inherit-product, device/sony/fuji-common/fuji.mk)
@@ -68,9 +70,10 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-# Aoba vendor blobs
-$(call inherit-product-if-exists, vendor/sony/aoba/aoba-vendor.mk)
-
+# Device properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=320
+    
 # Wifi
 BOARD_WLAN_DEVICE_REV := bcm4330_b2
 WIFI_BAND             := 802_11_ABG
