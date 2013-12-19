@@ -16,3 +16,6 @@ ro.sf.lcd_density=320
 #ADB
 ro.debuggable=1
 persist.sys.usb.config=adb
+
+# HDMI
+ro.hdmi.enable=true
