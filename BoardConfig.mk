@@ -39,5 +39,3 @@ TARGET_OTA_ASSERT_DEVICE := LT28h,LT28i,aoba
 
 # CM Hardware tunables
 BOARD_HARDWARE_CLASS += device/sony/aoba/cmhw
-
-TARGET_SPECIFIC_HEADER_PATH += device/sony/aoba/include
