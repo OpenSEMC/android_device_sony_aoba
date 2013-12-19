@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-PRODUCT_CHARACTERISTICS := default
+PRODUCT_CHARACTERISTICS := emmc_sdcard
 
 # Configuration scripts
 PRODUCT_COPY_FILES += \
@@ -70,10 +70,6 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-# Device properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
-    
 # Wifi
 BOARD_WLAN_DEVICE_REV := bcm4330_b2
 WIFI_BAND             := 802_11_ABG
