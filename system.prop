@@ -45,10 +45,6 @@ ste.nmf.autoidle=1
 # STE: Address of DBus STE bus
 ste.dbus.bus.address=unix:path=/dev/socket/dbus_ste
 
-# STE: UNSOL_CALL_RING is only sent once from RIL.
-# Android needs to generate more rings if needed.
-ro.telephony.call_ring.multiple=false
-
 # prop to indicate what kind of external memory the product have.
 ro.semc.product.user_storage=emmc_sdcard
 ro.build.characteristics=default
