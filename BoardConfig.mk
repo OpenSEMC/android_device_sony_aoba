@@ -35,7 +35,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p18
 
-TARGET_OTA_ASSERT_DEVICE := LT28h,LT28i,aoba
+TARGET_OTA_ASSERT_DEVICE := LT28h,aoba
 
 # CM Hardware tunables
 BOARD_HARDWARE_CLASS += device/sony/aoba/cmhw
