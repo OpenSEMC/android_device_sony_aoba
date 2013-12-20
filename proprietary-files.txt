@@ -158,3 +158,4 @@ vendor/camera/flash.dat
 vendor/camera/product.dat
 vendor/firmware/libpn544_fw_c2.so
 vendor/firmware/libpn544_fw_c3.so
+
