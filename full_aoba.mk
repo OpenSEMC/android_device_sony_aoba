@@ -32,6 +32,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from aoba device
 $(call inherit-product, device/sony/aoba/aoba.mk)
 
+# Aoba vendor blobs
+$(call inherit-product-if-exists, vendor/sony/aoba/aoba-vendor.mk)
+
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_aoba
 PRODUCT_DEVICE := aoba
