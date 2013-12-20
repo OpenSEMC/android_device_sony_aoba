@@ -15,3 +15,13 @@ ro.hdmi.enable=true
 #ADB
 ro.debuggable=1
 persist.sys.usb.config=adb
+
+# NFC
+ro.nfc.on.default=false
+ro.nfc.se.sim.enable=true
+ro.nfc.se.smx.enable=false
+ro.nfc.icon.enable=true
+ro.nfc.vendor.name=nxp
+
+# System props for audio
+persist.audio.hp=true
