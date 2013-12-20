@@ -14,15 +14,10 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/aoba/overlay
-# proprietary side of the device
-$(call inherit-product, vendor/sony/aoba/aoba-vendor.mk)
-
 # Inherit the fuji-common definitions
 $(call inherit-product, device/sony/fuji-common/fuji.mk)
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_eu_supl.mk)
+DEVICE_PACKAGE_OVERLAYS += device/sony/aoba/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -34,8 +29,6 @@ PRODUCT_COPY_FILES += \
 # if the xhdpi doesn't exist.
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
-PRODUCT_CHARACTERISTICS := emmc_sdcard
 
 # Configuration scripts
 PRODUCT_COPY_FILES += \
@@ -49,9 +42,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/fstab.semc:root/fstab.semc
-
-PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml
 
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
@@ -69,6 +59,12 @@ PRODUCT_COPY_FILES += \
    
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/twrp.fstab:recovery/root/etc/twrp.fstab
+ 
+$(call inherit-product-if-exists, vendor/sony/aoba/aoba-vendor.mk)
 
 # Wifi
 BOARD_WLAN_DEVICE_REV := bcm4330_b2
