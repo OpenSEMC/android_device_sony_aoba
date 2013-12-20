@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-#LOCAL_PATH := $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),aoba)
-    $(call inherit-product, device/sony/aoba/cfx.mk)
+    include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
