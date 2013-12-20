@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
- PRODUCT_MAKEFILES := \
+PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/full_aoba.mk
