@@ -61,3 +61,21 @@ on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
     restart adbd
     write /sys/class/android_usb/android0/enable 1
+
+# attempt to fix ril
+loglevel 4
+
+setprop ro.radio.noril no
+
+setprop hw.nophone false
+
+service ril-daemon /system/bin/rild -l /system/lib/libreference-ril.so -- -d /dev/smd0
+   socket rild stream 660 root radio
+   socket rild-debug stream 660 radio system
+   user root
+   group radio cache inet misc audio vpn net_admin
+
+service pppd_gprs /etc/ppp/init.gprs-pppd
+   user root
+   group radio cache inet misc
+   disabled
