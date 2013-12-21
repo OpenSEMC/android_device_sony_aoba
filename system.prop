@@ -16,6 +16,9 @@ ro.hdmi.enable=true
 ro.debuggable=1
 persist.sys.usb.config=adb
 
+# Graphics
+ro.sf.lcd_density=320
+
 # NFC
 ro.nfc.on.default=false
 ro.nfc.se.sim.enable=true
