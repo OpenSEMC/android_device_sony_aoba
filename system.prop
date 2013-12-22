@@ -1,3 +1,5 @@
+ro.telephony.ril_class=SonyQualcomm8x60RIL
+
 # Radio
 mobiledata.interfaces=rmnet_sdio0,rmnet_sdio1
 ro.telephony.default_network=9
