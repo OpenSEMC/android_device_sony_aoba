@@ -100,7 +100,6 @@ lib/libcald_imageutil.so
 lib/libcald_pal.so
 lib/libcald_server.so
 lib/libcald_util.so
-lib/libcamera_client.so
 lib/libcamera_clientsemc.so
 lib/libcameraextensionclient.so
 lib/libcameraextensionjni.so
@@ -152,7 +151,6 @@ lib/libqueue.so
 lib/libril-qc-qmi-1.so
 lib/libril.so
 lib/libs1sl.so
-lib/libsurfaceflinger_client.so
 lib/libsys-utils.so
 lib/libta.so
 lib/libta_rmt_clnt.so
