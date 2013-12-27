@@ -2,6 +2,7 @@ app/AntHalService.apk
 app/antradioservice.apk
 app/antstatenotifer.apk
 bin/bq275xx_fwloader
+bin/bridgemgrd
 bin/btld
 bin/cal_data_manager
 bin/chargemon
@@ -25,6 +26,7 @@ bin/suntrold
 bin/ta_reader
 bin/ta_rmt_service
 bin/tad
+bin/time_daemon
 bin/thermald
 bin/updatemiscta
 bin/wait4tad
@@ -104,6 +106,7 @@ lib/libcameraextensionclient.so
 lib/libcameraextensionjni.so
 lib/libcameraextensionservice.so
 lib/libcameralight.so
+lib/libcameraservice.so
 lib/libdiag.so
 lib/libdsi_netctrl.so
 lib/libdsm.so
@@ -119,6 +122,13 @@ lib/libmiscta.so
 lib/libmllite.so
 lib/libmlplatform.so
 lib/libmm-color-convertor.so
+lib/libmmcamera_faceproc.so
+lib/libmmcamera_frameproc.so
+lib/libmmcamera_hdr_lib.so
+lib/libmmcamera_image_stab.so
+lib/libmmcamera_interface2.so
+lib/libmmcamera_statsproc31.so
+lib/libmmcamera_wavelet_lib.so
 lib/libmmipl.so
 lib/libmmjpeg.so
 lib/libmmjps.so
@@ -160,4 +170,9 @@ vendor/camera/SOI13BS1_IMX091.dat
 vendor/camera/STW01BM0.dat
 vendor/camera/flash.dat
 vendor/camera/product.dat
-vendor/firmware/libpn544_fw_c2.so:vendor/firmware/libpn544_fw.so
+vendor/firmware/libpn544_fw_c2.so
+vendor/firmware/libpn544_fw.so
+lib/libqcci_legacy.so
+lib/libqmi_client_qmux.so
+lib/libQSEEComAPI.so
+lib/libsensors_akm8972.so
