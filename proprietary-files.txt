@@ -174,5 +174,4 @@ lib/libqcci_legacy.so
 lib/libqmi_client_qmux.so
 lib/libQSEEComAPI.so
 lib/libsensors_akm8972.so
-lib/libcamera_client.so
-lib/libsurfaceflinger_client.so
+
