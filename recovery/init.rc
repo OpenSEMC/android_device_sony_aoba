@@ -60,3 +60,16 @@ on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
     restart adbd
     write /sys/class/android_usb/android0/enable 1
+
+# Force RiL to Work
+loglevel 4
+
+setprop ro.radio.noril no
+
+setprop hw.nophone false
+service ril-daemon /system/bin/rild -l /system/lib/libreference-ril.so -- -d /dev/ttyHSL0
+   
+service pppd_gprs /etc/ppp/init.gprs-pppd
+   user root
+   group radio cache inet misc
+   disabled
