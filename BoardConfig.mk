@@ -12,7 +12,7 @@ TARGET_KERNEL_CONFIG := opensemc_fuji_aoba_defconfig
 BOARD_WLAN_BROADCOM := true
 
 # Custom bluedroid includes
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/nozomi/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/aoba/bluetooth
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 18
