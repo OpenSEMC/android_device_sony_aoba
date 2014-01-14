@@ -82,3 +82,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 BOARD_WLAN_DEVICE_REV := bcm4330_b2
 WIFI_BAND             := 802_11_ABG
+
+# Deodex if requested, otherwise stay odexed
+ifeq ($(DEODEX),true)
+        export DISABLE_DEXPREOPT=true
+        export WITH_DEXPREOPT=false
+else
+        export DISABLE_DEXPREOPT=false
+        export WITH_DEXPREOPT=true
+endif
