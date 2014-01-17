@@ -1,5 +1,5 @@
-# Copyright (C) 2012 FXP (FreeXperia)
-# Copyright (C) 2013 The Open SEMC Team
+# Copyright (C) 2013 The Android Open Source Project
+# Copyright (C) 2013 The OpenSEMC Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,10 +12,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),aoba)
-    include $(call first-makefiles-under,$(LOCAL_PATH))
-endif
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := healthd_semc_fuji.cpp
+LOCAL_MODULE := libhealthd.fuji
+LOCAL_C_INCLUDES := system/core/healthd
+include $(BUILD_STATIC_LIBRARY)

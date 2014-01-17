@@ -14,13 +14,23 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/aoba/overlay
-
 # Inherit the fuji-common definitions
 $(call inherit-product, device/sony/fuji-common/fuji.mk)
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_eu_supl.mk)
+# Radio and Telephony
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ril.transmitpower=true \
+    persist.radio.add_power_save=1
+
+# lib ril
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    rild.libpath=/system/lib/libril-qc-qmi-1.so
+
+# Do not power down SIM card when modem is sent to Low Power Mode.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1
+
+DEVICE_PACKAGE_OVERLAYS += device/sony/aoba/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -46,9 +56,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/fstab.semc:root/fstab.semc
 
-PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml
-
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/recovery/bootrec-device:recovery/bootrec-device
@@ -62,9 +69,25 @@ PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/config/keypad-pmic-fuji.kl:system/usr/keylayout/keypad-pmic-fuji.kl \
    $(LOCAL_PATH)/config/pmic8058_pwrkey.kl:system/usr/keylayout/pmic8058_pwrkey.kl \
    $(LOCAL_PATH)/config/simple_remote.kl:system/usr/keylayout/simple_remote.kl
+   
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/twrp.fstab:recovery/root/etc/twrp.fstab
+ 
+$(call inherit-product-if-exists, vendor/sony/aoba/aoba-vendor.mk)
 
 # Wifi
 BOARD_WLAN_DEVICE_REV := bcm4330_b2
 WIFI_BAND             := 802_11_ABG
+
+# Deodex if requested, otherwise stay odexed
+ifeq ($(DEODEX),true)
+        export DISABLE_DEXPREOPT=true
+        export WITH_DEXPREOPT=false
+else
+        export DISABLE_DEXPREOPT=false
+        export WITH_DEXPREOPT=true
+endif
