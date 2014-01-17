@@ -17,6 +17,19 @@
 # Inherit the fuji-common definitions
 $(call inherit-product, device/sony/fuji-common/fuji.mk)
 
+# Radio and Telephony
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ril.transmitpower=true \
+    persist.radio.add_power_save=1
+
+# lib ril
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    rild.libpath=/system/lib/libril-qc-qmi-1.so
+
+# Do not power down SIM card when modem is sent to Low Power Mode.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1
+
 DEVICE_PACKAGE_OVERLAYS += device/sony/aoba/overlay
 
 # These are the hardware-specific features
